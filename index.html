@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Autoevaluación de indice de riesgo teórico para veterianrios de registro</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="header">
+  <h1>Autoevaluación de indice de riesgo teórico(demo)</h1>
+  <p>Área de veterinarios de registro - MDA</p>
+</div>
+    <h2>Agregue actividades según el tipo de ..(explicar)... </h2>
+    <form id="scoreForm">
+        <div id="dropdownContainer">
+            <!-- Initial row of dropdown menus -->
+            <div class="menuRow">
+                <select class="scoreMenu">
+                    <option selected disabled>Tipo de alimento</option>
+                    <option value="5">tripas saladas - fiambres - productos congelados</option>
+                    <option value="10">carnes de las especie bovina - menudencias</option>
+                    <option value="10">carnes de las especie porcina</option>
+                    <option value="10">carnes de las especie ovina</option>
+                    <option value="15">carnes de las especie aviar</option>
+                </select>
+                <select class="scoreMenu">
+                    <option selected disabled>Tipo de proceso</option>    
+                    <option value="5">cámara/depósito de congelados o tripas saladas</option>
+                    <option value="10">cámara/depósito de fiambres refrigerados</option>
+                    <option value="15">cámara/depósito de medias reses bov/ porcinas</option>
+                    <option value="20">cámara de aves refrigeradas/cortes de especies bov, por, ov</option>
+                    <option value="20">fraccionadora de fiambres</option>
+                    <option value="25">despostadero de especie bov, por y ov</option>
+                    <option value="25">elaboración de chacinados frescos</option>
+                    <option value="30">elaboración de chacinados secos</option>
+                    <option value="45">elaboración de chacinados cocidos</option>
+                    <option value="30">elaboración de Salazones crudas</option>
+                    <option value="45">elaboración de Salazones cocidas</option>
+                    <option value="180">faena (todas las especies)</option>             
+                </select>
+                <select class="scoreMenu">
+                    <option selected disabled>Tipo habilitación</option>  
+                    <option value="5">habilitación rural</option>
+                    <option value="10">habilitación por partido</option>
+                    <option value="20">habilitación provincial</option>
+                </select>
+                <select class="scoreMenu">
+                    <option selected disabled>Cupo</option>   
+                    <option value="0">0</option>
+                </select>
+            </div>
+        </div>
+        <button type="button" onclick="addMenuRow()">Agregar actividad</button>
+        <button type="button" onclick="calculateScore()">Calcular riesgo</button>
+    </form>
+    <div id="result">
+        <p>Puntaje: <span id="scoreOutput">0</span></p>
+        <p>Categoría: <span id="categoryOutput">None</span></p>
+    </div>
+    <script src="script.js"></script>
+ <p><a href="https://www.gba.gob.ar/desarrollo_agrario/direccion_de_auditor%C3%ADa_agroalimentaria/veterinarios_de_registro">Guia de control y obligaciones en base a Categorias de Riesgo </a></p>
+
+</body>
+</html>
